@@ -1,13 +1,12 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence"
+// competitive-verifier: PROBLEM https://judge.yosupo.jp/problem/kth_term_of_linearly_recurrent_sequence
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 #include "../../math/fps/formal-power-series-friendly-ntt.hpp"
 #include "../../math/fps/kth-term-of-linearly-recurrent-sequence.hpp"
 
-const int MOD = 998244353;
-using mint = ModInt< MOD >;
+using mint = modint998244353;
 
 int main() {
   int D;

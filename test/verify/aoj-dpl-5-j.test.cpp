@@ -1,13 +1,13 @@
-#define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J"
+// competitive-verifier: PROBLEM http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DPL_5_J
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 
 #include "../../math/combinatorics/partition-table.hpp"
 
 int main() {
   int N, K;
   cin >> N >> K;
-  cout << partition_table< modint >(N, K)[N][K] << endl;
+  cout << partition_table< modint1000000007 >(N, K)[N][K] << endl;
 }

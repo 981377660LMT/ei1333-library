@@ -1,41 +1,40 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/queue_operate_all_composite"
+// competitive-verifier: PROBLEM https://judge.yosupo.jp/problem/queue_operate_all_composite
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 
-#include "../../structure/others/sliding-window-aggregation.hpp"
+#include "../../structure/others/queue-operate-aggregation.hpp"
+#include "../../structure/class/affine.hpp"
 
-const int MOD = 998244353;
-using mint = ModInt< MOD >;
+using mint = modint998244353;
 
 int main() {
   int Q;
   cin >> Q;
-  using pi = pair< mint, mint >;
+  using pi = Affine< mint >;
   auto f = [](const pi &a, const pi &b) -> pi {
-    return {a.first * b.first, a.second * b.first + b.second};
+    return pi::op(a, b);
   };
-  SlidingWindowAggregation< pi > swa(f);
-  while(Q--) {
+  auto que = get_queue_operate_aggregation<pi>(f);
+  while (Q--) {
     int t;
     cin >> t;
-    if(t == 0) {
+    if (t == 0) {
       mint a, b;
       cin >> a >> b;
-      swa.push(pi(a, b));
+      que.push(pi(a, b));
     } else if(t == 1) {
-      swa.pop();
+      que.pop();
     } else {
       mint x;
       cin >> x;
-      if(swa.empty()) {
+      if (que.empty()) {
         cout << x << "\n";
       } else {
-        auto s = swa.fold_all();
-        cout << s.first * x + s.second << "\n";
+        auto s = que.all_prod();
+        cout << s.eval(x) << "\n";
       }
     }
   }
 }
-

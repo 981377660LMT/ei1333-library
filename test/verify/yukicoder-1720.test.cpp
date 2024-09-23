@@ -1,4 +1,4 @@
-#define PROBLEM "https://yukicoder.me/problems/no/1720"
+// competitive-verifier: PROBLEM https://yukicoder.me/problems/no/1720
 
 #include "../../template/template.hpp"
 
@@ -6,8 +6,7 @@
 
 #include "../../math/combinatorics/montgomery-mod-int.hpp"
 
-const int MOD = 998244353;
-using mint = MontgomeryModInt< MOD >;
+using mint = modint998244353;
 
 int main() {
   int N, K;

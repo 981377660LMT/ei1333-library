@@ -1,13 +1,12 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/matrix_det"
+// competitive-verifier: PROBLEM https://judge.yosupo.jp/problem/matrix_det
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 
 #include "../../math/matrix/matrix.hpp"
 
-const int MOD = 998244353;
-using mint = ModInt< MOD >;
+using mint = modint998244353;
 
 int main() {
   int N;

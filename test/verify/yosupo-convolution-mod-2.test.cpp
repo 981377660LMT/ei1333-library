@@ -1,12 +1,11 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/convolution_mod"
+// competitive-verifier: PROBLEM https://judge.yosupo.jp/problem/convolution_mod
 
 #include "../../template/template.hpp"
 
 #include "../../math/combinatorics/montgomery-mod-int.hpp"
 #include "../../math/fft/number-theoretic-transform-friendly-mod-int.hpp"
 
-const int MOD = 998244353;
-using mint = MontgomeryModInt< MOD, true >;
+using mint = modint998244353;
 
 int main() {
   int N, M;

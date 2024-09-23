@@ -1,16 +1,15 @@
-#define PROBLEM "https://judge.yosupo.jp/problem/sparse_matrix_det"
+// competitive-verifier: PROBLEM https://judge.yosupo.jp/problem/sparse_matrix_det
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 
 #include "../../math/fps/formal-power-series.hpp"
 
 #include "../../math/fps/berlekamp-massey.hpp"
 #include "../../math/fps/sparse-matrix.hpp"
 
-const int MOD = 998244353;
-using mint = ModInt< MOD >;
+using mint = modint998244353;
 
 int main() {
   int N, K;

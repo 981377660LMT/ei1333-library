@@ -1,14 +1,13 @@
-#define PROBLEM "https://yukicoder.me/problems/no/502"
+// competitive-verifier: PROBLEM https://yukicoder.me/problems/no/502
 
 #include "../../template/template.hpp"
 
-#include "../../math/combinatorics/mod-int.hpp"
+#include "../../math/combinatorics/montgomery-mod-int.hpp"
 #include "../../math/combinatorics/factorial.hpp"
 
 #include "../../math/fft/arbitrary-mod-convolution.hpp"
 
-const int MOD = (int) (1e9 + 7);
-using mint = ModInt< MOD >;
+using mint = modint1000000007;
 
 int main() {
   int N;

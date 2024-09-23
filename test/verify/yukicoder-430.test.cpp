@@ -1,8 +1,6 @@
-#define PROBLEM "https://yukicoder.me/problems/no/430"
+// competitive-verifier: PROBLEM https://yukicoder.me/problems/no/430
 
 #include "../../template/template.hpp"
-
-#include "../../structure/trie/trie.hpp"
 
 #include "../../string/aho-corasick.hpp"
 
